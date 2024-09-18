@@ -10,11 +10,11 @@
 }
 
 body {
-  background: url("assets/assets/bg.jpg");
+  background: rgba(250, 197, 241, 0.836);
   width: 100%;
   height: 100dvh;
-  background-size: cover;
-  background-position: center;
+  /* background-size: cover; */
+  /* background-position: center; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,14 +30,14 @@ body::before {
 }
 
 .main-container {
-  width: 300px;
-  height: 496px;
+  width: 710px;
+  height: 480px;
   z-index: 1;
   background: linear-gradient(
-    to top, rgb(0, 0, 0, 0.15),
+    to top, rgba(0, 0, 0, 0.1),
     rgb(255, 255, 255, 0.15)
   );
-  border-radius: 12px;
+  border-radius: 10px;
   backdrop-filter: blur(100px);
   padding: 20px;
 }
@@ -122,4 +122,80 @@ body::before {
 .weather-summary-info {
   text-align: end;
 }
+
+.weather-conditions-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.condition-item {
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+}
+
+.condition-item span {
+  font-size: 30px;
+}
+
+
+.forecast-items-container {
+  display: flex;
+  gap: 15px;
+  overflow: scroll;
+  padding-bottom:12px;
+}
+
+.forecast-items-container::-webkit-scrollbar{
+  height: 10px;
+  display: none;
+}
+
+.forecast-items-container::-webkit-scrollbar-track   {
+  background: rgb(0, 0, 0, 0.1);
+  border-radius: 99px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0, 0.1);
+
+}
+
+.forecast-item {
+  min-width: 70px;
+  background: rgb(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 12px;
+  transition: 0.3s background;
+}
+
+.forecast-item:hover {
+  background: rgb(255, 255, 255, 0.15);
+}
+
+.forecast-item-img {
+  width: 35px;
+  height: 35px;
+}
 /* End Weather info */
+
+/* Section: message 404 */
+.section-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+}
+
+.section-message img {
+  height: 450px;
+  width: fit-content;
+}
+/* End Section: message 404 */
